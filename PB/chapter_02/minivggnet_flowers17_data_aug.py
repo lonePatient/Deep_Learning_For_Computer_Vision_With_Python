@@ -19,8 +19,6 @@ import os
 ap  = argparse.ArgumentParser()
 ap.add_argument('-d','--dataset',required=True,help='path to input dataset')
 args = vars(ap.parse_args())
-# args = {}
-# args['dataset']='/home/liuweitang/keras_learning/data/flowers17'
 
 print('[INFO] moving image to label folder.....')
 im  = IM.MoveImageToLabel(dataPath=args['dataset'])
