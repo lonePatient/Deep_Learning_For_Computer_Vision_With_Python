@@ -38,7 +38,8 @@ class HDF5DatasetWriter:
 
     def storeClassLabels(self,classLabels):
         # 一个dataset存储数据标签名称
-        dt = h5py.special_dtype(vlen = unicode)
+        # dt = h5py.special_dtype(vlen = unicode)  # python2.7
+        dt = h5py.special_dtype(vlen = str) # python3
         labelSet =self.db.create_dataset('label_names',(len(classLabels),),dtype=dt)
         labelSet[:] = classLabels
 
