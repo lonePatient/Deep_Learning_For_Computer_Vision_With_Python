@@ -16,9 +16,9 @@ def rank5_accuracy(preds,labels):
         if gt == p[0]:
             rank1 += 1
         # 计算准确度
-        rank1 /= float(len(labels))
-        rank5 /= float(len(labels))
+    rank1 /= float(len(labels))
+    rank5 /= float(len(labels))
 
-        return rank1,rank5
+    return rank1,rank5
 
 
